@@ -1,0 +1,40 @@
+.partsuperior{
+    background-color: greenyellow;
+    height: 10%;
+}
+
+
+
+.parteproceso{
+    background-color: white;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 6%;
+    height: 750%;
+    border-style: solid double;
+}
+
+.pie{
+    background-color: yellowgreen;
+    width: 100%;
+    height: 20%;
+}
+
+.img1{
+    background-image: url(imagen.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 30%;
+    border-style: initial;
+    float: left;
+    margin-left: 2.2%;
+    margin-top: 2%;
+    width: 100px;
+
+    height: 100px;
+}
+
+body {
+    background-color: purple;
+}
