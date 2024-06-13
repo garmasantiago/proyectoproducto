@@ -9,15 +9,45 @@
 		 
     </head>
     <body>
-        <div class="partsuperior container-fluid">
-            <div class="col-3">
-                <img class ="img1">
+       <script>
+                    var cuerpo = ''
+					var r
+					fetch('https://api.sampleapis.com/countries/countries').then(r=>r.json()).then(r=> manejar(r))
+				
+					const manejar = (r) => {
+						console.log(r)
+						
+                        for(var a=0;a<20; a++){
+							nota = r[a].media
+							console.log(r[a].capital)
+							 cuerpo +='<div class="card" style="width: 18rem;">'
+                                  //  +'<img src="..." class="card-img-top" alt="...">'
+                                    +'<div class="card-body">'
+                                        +'<p class="card-text">'+r[a].name+'</p>'
+                                        +'<p class="card-text">'+r[a].capital+'</p>'
+                                        +'<p class="card-text">'+r[a].currency+'</p>'
+                                        +'</div>'
+                                    +'</div>'
+
+
+						}
+                        document.getElementById("c1").innerHTML = cuerpo;
+                    }
+					
+		</script>
+	
+        <div class= "container-fluid">
+            <div class= "row partsuperior">
+                <div class="col-3 ">
+                    <img class ="img1">
+                    <button onclick = location.href = "registro.html">Registro</button>
+                </div>
             </div>
-            <button onclick=location.href="registro.html">nombre</button>
-            <div class="parteproceso">
+            <div class="container-fluid">
+                <div class="hoja" id="c1"></div>
             </div>
-            <div class="pie">
-            </div>
+            <div class="row pie">
+            </div>     
         </div>
     </body>   
     </html>
